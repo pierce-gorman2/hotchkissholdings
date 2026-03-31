@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community | Hotchkiss Holdings</title>
+  <meta name="description" content="Community partnerships, local events, and outreach connected to Hotchkiss Holdings and its Dave's Hot Chicken territories." />
+  <style>
+    :root { --bg:#f7f2e9; --text:#1d1712; --muted:#655c52; --line:rgba(56,43,30,.12); --brand:#bb3e1d; --shadow:0 18px 44px rgba(36,24,16,.08); --max-width:1180px; --radius:24px; --nav-height:92px; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:"Avenir Next","Segoe UI","Helvetica Neue",sans-serif; color:var(--text); background:radial-gradient(circle at top left,rgba(217,181,116,.12),transparent 34%),linear-gradient(180deg,#fbf6ee 0%,var(--bg) 34%,#f9f5ef 100%); line-height:1.65; }
+    a { color:inherit; text-decoration:none; }
+    .container { width:min(92%,var(--max-width)); margin:0 auto; }
+    .hero { padding:calc(var(--nav-height) + 32px) 0 54px; background:linear-gradient(180deg,#20150d 0%,#2f1c10 100%); color:#fff7ef; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:24px; padding-bottom:44px; }
+    .site-header { position:fixed; top:0; left:0; z-index:30; width:100%; padding:22px 0; transition:background .3s ease, box-shadow .3s ease, padding .3s ease, backdrop-filter .3s ease; }
+    .site-header.is-scrolled { background:rgba(20,15,10,.82); backdrop-filter:blur(16px); box-shadow:0 10px 30px rgba(0,0,0,.18); padding:14px 0; }
+    .brand-link,h1,h2,h3 { font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Baskerville,Georgia,serif; letter-spacing:-.03em; }
+    .brand-link { font-size:1.05rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase; }
+    .nav { display:flex; flex-wrap:wrap; gap:16px 24px; align-items:flex-start; }
+    .nav a,.nav button,.eyebrow,.label { font-size:.8rem; letter-spacing:.18em; text-transform:uppercase; }
+    .nav a,.nav button { color:rgba(255,244,232,.82); background:none; border:0; cursor:pointer; }
+    .nav-dropdown { position:relative; }
+    .nav-toggle { display:inline-flex; align-items:center; gap:8px; font:inherit; }
+    .dropdown-menu { position:absolute; top:calc(100% + 12px); left:0; min-width:220px; padding:14px; border-radius:18px; border:1px solid rgba(255,244,232,.16); background:rgba(24,18,13,.96); box-shadow:0 22px 46px rgba(0,0,0,.24); opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .22s ease, transform .22s ease, visibility .22s ease; }
+    .dropdown-menu a { display:block; padding:10px 12px; border-radius:12px; color:#fff8f1; }
+    .dropdown-menu a:hover,.dropdown-menu a:focus-visible { background:rgba(255,255,255,.08); }
+    .nav-dropdown:hover .dropdown-menu,.nav-dropdown:focus-within .dropdown-menu,.nav-dropdown.is-open .dropdown-menu { opacity:1; visibility:visible; transform:translateY(0); }
+    h1 { font-size:clamp(3rem,5vw,5.5rem); line-height:.98; font-weight:500; margin-bottom:20px; }
+    .eyebrow,.label { color:#d9b574; }
+    .hero p { max-width:720px; font-size:1.1rem; color:rgba(255,244,232,.88); }
+    main { padding:86px 0 96px; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+    .card { position:relative; display:flex; flex-direction:column; height:100%; padding:30px; border:1px solid var(--line); border-radius:var(--radius); background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,251,245,.94)); box-shadow:var(--shadow); transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease; }
+    .label { display:inline-block; margin-bottom:12px; font-weight:800; }
+    .card h3 { font-size:1.8rem; line-height:1.05; font-weight:500; margin-bottom:12px; }
+    .card p { color:#43392f; }
+    .card-status { margin-top:auto; padding-top:18px; color:#17120d; font-weight:800; text-align:center; }
+    .card:hover,.card:focus-within { transform:translateY(-5px); box-shadow:0 22px 46px rgba(36,24,16,.12); border-color:rgba(217,181,116,.28); }
+    @media (max-width:900px) { .site-header { padding:18px 0; } .topbar,.grid { display:block; } .nav { margin-top:18px; } .card + .card { margin-top:24px; } .dropdown-menu { position:static; margin-top:12px; opacity:1; visibility:visible; transform:none; background:rgba(255,255,255,.08); box-shadow:none; border-color:rgba(255,255,255,.14); } }
+    @media (max-width:640px) { :root { --nav-height:164px; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="site-header" id="site-header">
+        <div class="container">
+          <div class="topbar">
+            <a class="brand-link" href="/">Hotchkiss Holdings</a>
+            <nav class="nav" aria-label="Primary navigation">
+              <div class="nav-dropdown">
+                <button class="nav-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                  <span>Our Brands</span>
+                  <span>&#9662;</span>
+                </button>
+                <div class="dropdown-menu">
+                  <a href="/brands.html">All Brands</a>
+                  <a href="/little-caesars.html">Little Caesars</a>
+                  <a href="/firehouse-subs.html">Firehouse Subs</a>
+                  <a href="/daves-hot-chicken.html">Dave's Hot Chicken</a>
+                </div>
+              </div>
+              <a href="/news.html">News</a>
+              <a href="/community.html">Community</a>
+              <a href="/about.html">About</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <span class="eyebrow">Community</span>
+      <h1>Community</h1>
+      <p>Hotchkiss Holdings is committed to supporting the communities where our Dave's Hot Chicken restaurants operate, with local partnerships that make each territory stronger.</p>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="grid">
+        <article class="card"><span class="label">Schools</span><h3>Fundraising Nights</h3><p>Supporting schools through fundraising events, team meals, spirit nights, and partnerships that bring guests and neighborhoods together.</p><p class="card-status">Coming Soon</p></article>
+        <article class="card"><span class="label">Neighborhoods</span><h3>Local Events</h3><p>Showing up in every market through grand openings, community festivals, and city-specific events that help each restaurant feel rooted locally.</p><p class="card-status">Coming Soon</p></article>
+        <article class="card"><span class="label">Partnerships</span><h3>Community Outreach</h3><p>Working alongside nonprofit and civic partners in Nashville, San Antonio, Kansas, and Kentucky as our footprint grows.</p><p class="card-status">Coming Soon</p></article>
+      </div>
+    </div>
+  </main>
+  <script>
+    const siteHeader = document.getElementById('site-header');
+    const dropdown = document.querySelector('.nav-dropdown');
+    const dropdownButton = document.querySelector('.nav-toggle');
+    const syncHeader = () => siteHeader.classList.toggle('is-scrolled', window.scrollY > 24);
+    syncHeader();
+    window.addEventListener('scroll', syncHeader, { passive: true });
+    if (dropdown && dropdownButton) {
+      dropdownButton.addEventListener('click', () => {
+        const isOpen = dropdown.classList.toggle('is-open');
+        dropdownButton.setAttribute('aria-expanded', String(isOpen));
+      });
+      document.addEventListener('click', (event) => {
+        if (!dropdown.contains(event.target)) {
+          dropdown.classList.remove('is-open');
+          dropdownButton.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

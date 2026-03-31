@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Hotchkiss Holdings</title>
+  <meta
+    name="description"
+    content="Learn about Hotchkiss Holdings, the Hotchkiss family restaurant legacy, and the company's Dave's Hot Chicken growth strategy."
+  />
+  <style>
+    :root { --bg:#f7f2e9; --text:#1d1712; --muted:#655c52; --line:rgba(56,43,30,.12); --brand:#bb3e1d; --shadow:0 18px 44px rgba(36,24,16,.08); --max-width:1180px; --radius:24px; --nav-height:92px; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:"Avenir Next","Segoe UI","Helvetica Neue",sans-serif; color:var(--text); background:radial-gradient(circle at top left,rgba(217,181,116,.12),transparent 34%),linear-gradient(180deg,#fbf6ee 0%,var(--bg) 34%,#f9f5ef 100%); line-height:1.65; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+    a { color:inherit; text-decoration:none; }
+    .container { width:min(92%,var(--max-width)); margin:0 auto; }
+    .hero { padding:calc(var(--nav-height) + 32px) 0 54px; background:linear-gradient(180deg,#20150d 0%,#2f1c10 100%); color:#fff7ef; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:24px; padding-bottom:44px; }
+    .site-header { position:fixed; top:0; left:0; z-index:30; width:100%; padding:22px 0; transition:background .3s ease, box-shadow .3s ease, padding .3s ease, backdrop-filter .3s ease; }
+    .site-header.is-scrolled { background:rgba(20,15,10,.82); backdrop-filter:blur(16px); box-shadow:0 10px 30px rgba(0,0,0,.18); padding:14px 0; }
+    .brand-link,h1,.content-panel h2 { font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Baskerville,Georgia,serif; letter-spacing:-.03em; }
+    .brand-link { font-size:1.05rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase; }
+    .nav { display:flex; flex-wrap:wrap; gap:16px 24px; align-items:flex-start; }
+    .nav a,.nav button,.eyebrow,.section-label { font-size:.8rem; letter-spacing:.18em; text-transform:uppercase; }
+    .nav a,.nav button { color:rgba(255,244,232,.82); background:none; border:0; cursor:pointer; }
+    .nav-dropdown { position:relative; }
+    .nav-toggle { display:inline-flex; align-items:center; gap:8px; font:inherit; }
+    .dropdown-menu { position:absolute; top:calc(100% + 12px); left:0; min-width:220px; padding:14px; border-radius:18px; border:1px solid rgba(255,244,232,.16); background:rgba(24,18,13,.96); box-shadow:0 22px 46px rgba(0,0,0,.24); opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .22s ease, transform .22s ease, visibility .22s ease; }
+    .dropdown-menu a { display:block; padding:10px 12px; border-radius:12px; color:#fff8f1; }
+    .dropdown-menu a:hover,.dropdown-menu a:focus-visible { background:rgba(255,255,255,.08); }
+    .nav-dropdown:hover .dropdown-menu,.nav-dropdown:focus-within .dropdown-menu,.nav-dropdown.is-open .dropdown-menu { opacity:1; visibility:visible; transform:translateY(0); }
+    .eyebrow,.section-label { color:#d9b574; }
+    h1 { font-size:clamp(3rem,5vw,5.5rem); line-height:.98; font-weight:500; margin-bottom:20px; }
+    .hero-copy { max-width:860px; }
+    .hero-copy p { max-width:760px; font-size:1.1rem; color:rgba(255,244,232,.88); }
+    main { padding:86px 0 96px; }
+    .about-stack { display:grid; gap:30px; }
+    .content-panel {
+      width:min(100%, 900px);
+      margin:0 auto;
+      padding:38px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,251,245,.94));
+      box-shadow:var(--shadow);
+    }
+    .section-label { display:inline-block; margin-bottom:12px; font-weight:800; }
+    .content-panel h2 { font-size:2rem; line-height:1.05; font-weight:500; margin-bottom:12px; color:#241b13; }
+    .content-panel p + p { margin-top:20px; }
+    .content-panel p { color:#43392f; font-size:1.04rem; }
+    @media (max-width:900px) { .site-header { padding:18px 0; } .topbar { display:block; } .nav { margin-top:18px; } .dropdown-menu { position:static; margin-top:12px; opacity:1; visibility:visible; transform:none; background:rgba(255,255,255,.08); box-shadow:none; border-color:rgba(255,255,255,.14); } }
+    @media (max-width:640px) { :root { --nav-height:164px; } .content-panel { padding:28px; } main { padding:72px 0 80px; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="site-header" id="site-header">
+        <div class="container">
+          <div class="topbar">
+            <a class="brand-link" href="/">Hotchkiss Holdings</a>
+            <nav class="nav" aria-label="Primary navigation">
+              <div class="nav-dropdown">
+                <button class="nav-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                  <span>Our Brands</span>
+                  <span>&#9662;</span>
+                </button>
+                <div class="dropdown-menu">
+                  <a href="/brands.html">All Brands</a>
+                  <a href="/little-caesars.html">Little Caesars</a>
+                  <a href="/firehouse-subs.html">Firehouse Subs</a>
+                  <a href="/daves-hot-chicken.html">Dave's Hot Chicken</a>
+                </div>
+              </div>
+              <a href="/news.html">News</a>
+              <a href="/community.html">Community</a>
+              <a href="/about.html">About</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="hero-copy">
+        <span class="eyebrow">About</span>
+        <h1>About Hotchkiss Holdings</h1>
+        <p>Hotchkiss Holdings brings together a multi-generation restaurant operating legacy and a focused commitment to becoming a premier Dave's Hot Chicken franchise company.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="about-stack">
+        <section class="content-panel">
+          <span class="section-label">Our Story</span>
+          <h2>Built on decades of restaurant experience.</h2>
+          <p>Hotchkiss Holdings traces its roots back to 1984, when Lee and Kathy Hotchkiss brought the first Little Caesars to San Antonio. What began as a single pioneering move in the market grew into a substantial family operating business over the decades that followed.</p>
+          <p>Alongside their two sons, Jason and John Hotchkiss, the family built that platform into a 45-store operation. That experience shaped a hands-on approach to development, leadership, and restaurant operations that still defines the company today.</p>
+        </section>
+
+        <section class="content-panel">
+          <span class="section-label">Dave's Hot Chicken</span>
+          <h2>A new chapter with a high-growth brand.</h2>
+          <p>In 2022, Paul Gorman joined Jason and John Hotchkiss and the team began building with Dave's Hot Chicken. Together, they set out to create a platform that could pair disciplined operations with smart, market-by-market expansion.</p>
+          <p>Today, Hotchkiss Holdings is focused on becoming the premier operator in the Dave's Hot Chicken system by building restaurants that guests love, teams are proud to work in, and communities are excited to support.</p>
+        </section>
+
+        <section class="content-panel">
+          <span class="section-label">Mission</span>
+          <h2>Excellent restaurants and innumerable opportunities.</h2>
+          <p>Our mission is to have excellent restaurants in every city we are in and to create innumerable opportunities for our team members and partners. We believe sustained growth should be built on strong people, strong execution, and a genuine commitment to hospitality.</p>
+          <p>Hotchkiss Holdings currently has three Dave's Hot Chicken locations open and a goal to open 20-plus more in the next five years across our territories.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <script>
+    const siteHeader = document.getElementById('site-header');
+    const dropdown = document.querySelector('.nav-dropdown');
+    const dropdownButton = document.querySelector('.nav-toggle');
+    const syncHeader = () => siteHeader.classList.toggle('is-scrolled', window.scrollY > 24);
+    syncHeader();
+    window.addEventListener('scroll', syncHeader, { passive: true });
+    if (dropdown && dropdownButton) {
+      dropdownButton.addEventListener('click', () => {
+        const isOpen = dropdown.classList.toggle('is-open');
+        dropdownButton.setAttribute('aria-expanded', String(isOpen));
+      });
+      document.addEventListener('click', (event) => {
+        if (!dropdown.contains(event.target)) {
+          dropdown.classList.remove('is-open');
+          dropdownButton.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
