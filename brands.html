@@ -16,19 +16,14 @@
     .container { width:min(92%,var(--max-width)); margin:0 auto; }
     .page-hero { padding:calc(var(--nav-height) + 32px) 0 54px; background:linear-gradient(180deg,#20150d 0%,#2f1c10 100%); color:#fff7ef; }
     .topbar { display:flex; align-items:center; justify-content:space-between; gap:24px; padding-bottom:44px; }
-    .site-header { position:fixed; top:0; left:0; z-index:30; width:100%; padding:22px 0; transition:background .3s ease, box-shadow .3s ease, padding .3s ease, backdrop-filter .3s ease; }
+    .site-header { position:fixed; top:0; left:0; z-index:30; width:100%; padding:22px 0; transition:background .3s ease, box-shadow .3s ease, padding .3s ease, backdrop-filter .3s ease, transform .3s ease; }
     .site-header.is-scrolled { background:rgba(20,15,10,.82); backdrop-filter:blur(16px); box-shadow:0 10px 30px rgba(0,0,0,.18); padding:14px 0; }
+    .site-header.is-hidden { transform:translateY(-120%); }
     .brand-link,.brand-card h2,h1,.section-head h2 { font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Baskerville,Georgia,serif; letter-spacing:-.03em; }
     .brand-link { font-size:1.05rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase; }
     .nav { display:flex; flex-wrap:wrap; gap:16px 24px; align-items:flex-start; }
-    .nav a,.nav button,.eyebrow,.label { font-size:.8rem; letter-spacing:.18em; text-transform:uppercase; }
-    .nav a,.nav button { color:rgba(255,244,232,.82); background:none; border:0; cursor:pointer; }
-    .nav-dropdown { position:relative; }
-    .nav-toggle { display:inline-flex; align-items:center; gap:8px; font:inherit; }
-    .dropdown-menu { position:absolute; top:calc(100% + 12px); left:0; min-width:220px; padding:14px; border-radius:18px; border:1px solid rgba(255,244,232,.16); background:rgba(24,18,13,.96); box-shadow:0 22px 46px rgba(0,0,0,.24); opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .22s ease, transform .22s ease, visibility .22s ease; }
-    .dropdown-menu a { display:block; padding:10px 12px; border-radius:12px; color:#fff8f1; }
-    .dropdown-menu a:hover,.dropdown-menu a:focus-visible { background:rgba(255,255,255,.08); }
-    .nav-dropdown:hover .dropdown-menu,.nav-dropdown:focus-within .dropdown-menu,.nav-dropdown.is-open .dropdown-menu { opacity:1; visibility:visible; transform:translateY(0); }
+    .nav a,.eyebrow,.label { font-size:.8rem; letter-spacing:.18em; text-transform:uppercase; }
+    .nav a { color:rgba(255,244,232,.82); }
     .eyebrow,.label { color:#d9b574; }
     h1 { font-size:clamp(3rem,5vw,5.5rem); line-height:.98; font-weight:500; margin-bottom:20px; }
     .hero-copy { max-width:860px; }
@@ -42,8 +37,8 @@
     .brand-card p { color:#43392f; }
     .brand-card .meta { margin-top:18px; display:inline-flex; align-items:center; gap:10px; color:#6c5e51; font-size:.84rem; letter-spacing:.12em; text-transform:uppercase; }
     .brand-card .meta::before { content:""; width:22px; height:1px; background:rgba(108,94,81,.46); }
-    @media (max-width:900px) { .site-header { padding:18px 0; } .topbar { display:block; } .nav { margin-top:18px; } .brand-card { grid-template-columns:1fr; } .dropdown-menu { position:static; margin-top:12px; opacity:1; visibility:visible; transform:none; background:rgba(255,255,255,.08); box-shadow:none; border-color:rgba(255,255,255,.14); } }
-    @media (max-width:640px) { :root { --nav-height:164px; } .brand-card { padding:24px; } }
+    @media (max-width:900px) { :root { --nav-height:88px; } .site-header { padding:14px 0; } .topbar { flex-wrap:wrap; padding-bottom:12px; } .nav { width:100%; margin-top:12px; gap:12px 18px; } .brand-card { grid-template-columns:1fr; } }
+    @media (max-width:640px) { .brand-card { padding:24px; } }
   </style>
 </head>
 <body>
@@ -54,18 +49,7 @@
           <div class="topbar">
             <a class="brand-link" href="/">Hotchkiss Holdings</a>
             <nav class="nav" aria-label="Primary navigation">
-              <div class="nav-dropdown">
-                <button class="nav-toggle" type="button" aria-haspopup="true" aria-expanded="false">
-                  <span>Our Brands</span>
-                  <span>&#9662;</span>
-                </button>
-                <div class="dropdown-menu">
-                  <a href="/brands.html">All Brands</a>
-                  <a href="/little-caesars.html">Little Caesars</a>
-                  <a href="/firehouse-subs.html">Firehouse Subs</a>
-                  <a href="/daves-hot-chicken.html">Dave's Hot Chicken</a>
-                </div>
-              </div>
+              <a href="/brands.html">Our Brands</a>
               <a href="/news.html">News</a>
               <a href="/community.html">Community</a>
               <a href="/about.html">About</a>
@@ -100,23 +84,15 @@
   </main>
   <script>
     const siteHeader = document.getElementById('site-header');
-    const dropdown = document.querySelector('.nav-dropdown');
-    const dropdownButton = document.querySelector('.nav-toggle');
-    const syncHeader = () => siteHeader.classList.toggle('is-scrolled', window.scrollY > 24);
+    let lastScrollY = window.scrollY;
+    const syncHeader = () => {
+      const currentScrollY = window.scrollY;
+      siteHeader.classList.toggle('is-scrolled', currentScrollY > 24);
+      siteHeader.classList.toggle('is-hidden', currentScrollY > 120 && currentScrollY > lastScrollY);
+      lastScrollY = currentScrollY;
+    };
     syncHeader();
     window.addEventListener('scroll', syncHeader, { passive: true });
-    if (dropdown && dropdownButton) {
-      dropdownButton.addEventListener('click', () => {
-        const isOpen = dropdown.classList.toggle('is-open');
-        dropdownButton.setAttribute('aria-expanded', String(isOpen));
-      });
-      document.addEventListener('click', (event) => {
-        if (!dropdown.contains(event.target)) {
-          dropdown.classList.remove('is-open');
-          dropdownButton.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
   </script>
 </body>
 </html>
