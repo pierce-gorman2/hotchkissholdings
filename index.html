@@ -24,7 +24,7 @@
     .hero::before { top:18%; right:-6%; width:32rem; height:32rem; background:radial-gradient(circle,rgba(217,181,116,.2),transparent 64%); filter:blur(8px); }
     .hero::after { bottom:-12rem; left:-6rem; width:28rem; height:28rem; background:radial-gradient(circle,rgba(187,62,29,.24),transparent 68%); filter:blur(12px); }
     .site-header { position:fixed; top:0; left:0; z-index:30; width:100%; padding:22px 0; transition:background .3s ease, box-shadow .3s ease, padding .3s ease, backdrop-filter .3s ease, border-color .3s ease, transform .3s ease; }
-    .site-header.is-hidden { transform:translateY(-140%); }
+    .site-header.is-hidden { transform:translateY(-120%); }
     .site-header.is-scrolled { background:rgba(20,15,10,.86); backdrop-filter:blur(16px); box-shadow:0 10px 30px rgba(0,0,0,.18); padding:14px 0; }
     .nav-wrap { display:flex; align-items:center; justify-content:space-between; gap:36px; }
     .brand-lockup { display:inline-flex; align-items:center; gap:16px; flex-shrink:0; }
@@ -326,7 +326,7 @@
     const syncHeader = () => {
       const currentScrollY = window.scrollY;
       siteHeader.classList.toggle('is-scrolled', currentScrollY > 24);
-      siteHeader.classList.toggle('is-hidden', currentScrollY > 60 && currentScrollY > lastScrollY + 4);
+      siteHeader.classList.toggle('is-hidden', currentScrollY > 120 && currentScrollY > lastScrollY);
       lastScrollY = currentScrollY;
     };
     const setHistoryStage = (stage) => {
