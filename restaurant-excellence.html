@@ -72,7 +72,7 @@
     const syncHeader = () => {
       const currentScrollY = window.scrollY;
       siteHeader.classList.toggle('is-scrolled', currentScrollY > 24);
-      siteHeader.classList.toggle('is-hidden', currentScrollY > 120 && currentScrollY > lastScrollY);
+      siteHeader.classList.toggle('is-hidden', window.innerWidth < 900 ? currentScrollY > 60 : currentScrollY > 120 && currentScrollY > lastScrollY);
       lastScrollY = currentScrollY;
     };
     syncHeader();

@@ -327,7 +327,7 @@
     const syncHeader = () => {
       const currentScrollY = window.scrollY;
       siteHeader.classList.toggle('is-scrolled', currentScrollY > 24);
-      siteHeader.classList.toggle('is-hidden', currentScrollY > 60 && currentScrollY > lastScrollY + 4);
+      siteHeader.classList.toggle('is-hidden', window.innerWidth < 900 ? currentScrollY > 60 : currentScrollY > 60 && currentScrollY > lastScrollY + 4);
       lastScrollY = currentScrollY;
     };
     const setHistoryStage = (stage) => {
