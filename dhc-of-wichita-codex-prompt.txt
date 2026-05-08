@@ -1,0 +1,48 @@
+Please improve this DHC of Wichita website into a polished modern homepage.
+
+Goals:
+- Keep the same overall structure and layout
+- Preserve the full-screen hero image with dark overlay
+- Keep the navigation at the top with the logo on the left
+- Keep the large serif-style headline centered over the hero image
+- Keep the “Our Mission” section underneath with a clean elegant layout
+- Make the site feel premium, community-oriented, and hospitality-focused
+- Use responsive design so it looks great on desktop and mobile
+- Add smooth hover states and subtle animations
+- Keep the design simple, clean, and professional
+
+Brand feel:
+- Bold
+- Community-focused
+- Premium but approachable
+- Restaurant/hospitality driven
+- Kansas pride without looking cheesy
+
+Sections to include:
+1. Hero
+2. Our Mission
+3. Our Locations
+4. Our Team
+5. Our History
+6. Media
+7. Contact
+
+Technical requests:
+- Keep it in a single HTML file unless splitting files makes it significantly cleaner
+- Use clean semantic HTML
+- Improve typography and spacing
+- Add polished buttons where appropriate
+- Add placeholder cards or layouts for locations and team members
+- Make the navigation sticky on scroll
+- Keep the hero text readable over the image
+- Use elegant serif headings and clean sans-serif body text
+- Make it look like a real company website, not a template
+
+Important:
+- Do not overdesign it
+- Do not make it flashy
+- Keep it refined, bold, and trustworthy
+
+Asset notes:
+- The hero background image file should be named: hero-food.jpg
+- The logo file should be named: dhc-kansas-logo.png
