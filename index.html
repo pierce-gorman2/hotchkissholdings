@@ -12,25 +12,25 @@
     content="The Hotchkiss Group is the holding company for a growing Dave's Hot Chicken platform across Nashville, San Antonio, Kansas, and Kentucky, focused on excellent restaurants, strong teams, and lasting local impact."
   />
   <style>
-    :root { --bg:#f7f2e9; --text:#1d1712; --muted:#655c52; --line:rgba(56,43,30,.12); --overlay:rgba(15,11,7,.55); --brand:#bb3e1d; --brand-deep:#902d13; --highlight:#d9b574; --shadow:0 18px 44px rgba(36,24,16,.08); --shadow-strong:0 26px 60px rgba(30,21,14,.14); --max-width:1200px; --radius:24px; --radius-lg:34px; --nav-height:92px; --nav-text:#fff8f1; }
+    :root { --bg:#ffffff; --text:#17181c; --muted:#6b6f76; --line:rgba(20,20,30,.10); --overlay:rgba(10,10,13,.55); --brand:#d9432a; --brand-deep:#a8331f; --highlight:#f0a58c; --shadow:0 18px 44px rgba(15,15,22,.07); --shadow-strong:0 26px 60px rgba(15,15,22,.12); --max-width:1200px; --radius:24px; --radius-lg:34px; --nav-height:92px; --nav-text:#f4f4f6; }
     * { box-sizing:border-box; margin:0; padding:0; }
     html { scroll-behavior:smooth; }
-    body { font-family:"Avenir Next","Segoe UI","Helvetica Neue",sans-serif; color:var(--text); background:radial-gradient(circle at top left,rgba(217,181,116,.12),transparent 34%),linear-gradient(180deg,#fbf6ee 0%,var(--bg) 34%,#f9f5ef 100%); line-height:1.65; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+    body { font-family:"Avenir Next","Segoe UI","Helvetica Neue",sans-serif; color:var(--text); background:radial-gradient(circle at top left,rgba(20,20,30,.05),transparent 34%),linear-gradient(180deg,#fafafb 0%,var(--bg) 34%,#fafafb 100%); line-height:1.65; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
     img { display:block; max-width:100%; }
     a { color:inherit; text-decoration:none; }
     .container { width:min(92%,var(--max-width)); margin:0 auto; }
-    .hero { position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:space-between; padding-top:var(--nav-height); background:linear-gradient(180deg,rgba(6,5,4,.24),rgba(6,5,4,.32)),linear-gradient(180deg,var(--overlay) 6%,rgba(15,11,7,.38) 44%,rgba(15,11,7,.78) 100%),url('hero-food.jpg') center/cover no-repeat; color:#fff7ef; overflow:hidden; isolation:isolate; }
+    .hero { position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:space-between; padding-top:var(--nav-height); background:linear-gradient(180deg,rgba(8,8,10,.24),rgba(8,8,10,.32)),linear-gradient(180deg,var(--overlay) 6%,rgba(10,10,13,.38) 44%,rgba(10,10,13,.78) 100%),url('hero-food.jpg') center/cover no-repeat; color:#f4f4f6; overflow:hidden; isolation:isolate; }
     .hero::before,.hero::after { content:""; position:absolute; border-radius:50%; pointer-events:none; z-index:0; }
-    .hero::before { top:18%; right:-6%; width:32rem; height:32rem; background:radial-gradient(circle,rgba(217,181,116,.2),transparent 64%); filter:blur(8px); }
-    .hero::after { bottom:-12rem; left:-6rem; width:28rem; height:28rem; background:radial-gradient(circle,rgba(187,62,29,.24),transparent 68%); filter:blur(12px); }
+    .hero::before { top:18%; right:-6%; width:32rem; height:32rem; background:radial-gradient(circle,rgba(255,255,255,.10),transparent 64%); filter:blur(8px); }
+    .hero::after { bottom:-12rem; left:-6rem; width:28rem; height:28rem; background:radial-gradient(circle,rgba(217,67,42,.24),transparent 68%); filter:blur(12px); }
     .site-header { position:fixed; top:0; left:0; z-index:30; width:100%; padding:22px 0; transition:background .3s ease, box-shadow .3s ease, padding .3s ease, backdrop-filter .3s ease, border-color .3s ease, transform .3s ease; }
     .site-header.is-hidden { transform:translateY(-140%); }
-    .site-header.is-scrolled { background:rgba(20,15,10,.86); backdrop-filter:blur(16px); box-shadow:0 10px 30px rgba(0,0,0,.18); padding:14px 0; }
+    .site-header.is-scrolled { background:rgba(15,15,18,.86); backdrop-filter:blur(16px); box-shadow:0 10px 30px rgba(0,0,0,.18); padding:14px 0; }
     .nav-wrap { display:flex; align-items:center; justify-content:space-between; gap:36px; }
     .brand-lockup { display:inline-flex; align-items:center; gap:16px; flex-shrink:0; }
     .brand-copy { display:flex; flex-direction:column; gap:2px; }
     .brand-copy strong,.section h2,.card h3,.contact-title,.stat-number,.territory-card h3 { font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Baskerville,Georgia,serif; letter-spacing:-.03em; }
-    .brand-copy strong { font-size:1.05rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:#fff7ef; }
+    .brand-copy strong { font-size:1.05rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:#f4f4f6; }
     .nav { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:18px 28px; font-size:.96rem; letter-spacing:.08em; text-transform:uppercase; }
     .nav a { position:relative; color:var(--nav-text); transition:color .25s ease, transform .25s ease; text-shadow:0 2px 14px rgba(0,0,0,.45); }
     .nav a::after { content:""; position:absolute; left:0; bottom:-8px; width:100%; height:1px; background:linear-gradient(90deg,var(--highlight),rgba(255,255,255,.85)); transform:scaleX(0); transform-origin:left; transition:transform .25s ease; }
@@ -50,7 +50,7 @@
       letter-spacing:.06em;
       line-height:.9;
       text-transform:uppercase;
-      color:#f8efe5;
+      color:#f5f5f7;
       text-align:center;
       text-shadow:0 10px 34px rgba(0,0,0,.28);
       animation:titleSettle 1.8s cubic-bezier(.16,1,.3,1) both;
@@ -63,7 +63,7 @@
       width:min(28%,330px);
       height:1px;
       transform:translateX(-50%);
-      background:linear-gradient(90deg,transparent,rgba(248,239,229,.58),transparent);
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);
       animation:lineReveal 1.4s ease both;
     }
     .wordmark-line {
@@ -81,14 +81,14 @@
       margin:0 auto;
       font-size:clamp(1.08rem,1.7vw,1.35rem);
       line-height:1.85;
-      color:rgba(255,245,234,.9);
+      color:rgba(244,244,246,.9);
       text-wrap:balance;
       opacity:0;
       transform:translateY(18px);
       animation:copyReveal 1s ease .55s forwards;
     }
     .section { padding:108px 0; scroll-margin-top:calc(var(--nav-height) + 20px); }
-    .section--soft { background:linear-gradient(180deg,rgba(255,250,243,.96),rgba(252,247,239,.96)); }
+    .section--soft { background:linear-gradient(180deg,rgba(250,250,251,.96),rgba(246,247,248,.96)); }
     .section-heading { display:flex; justify-content:space-between; align-items:end; gap:28px; margin-bottom:42px; }
     .section-tag,.label,.contact-item span { display:inline-block; color:var(--brand); font-weight:800; text-transform:uppercase; }
     .section-tag { margin-bottom:14px; font-size:.82rem; letter-spacing:.18em; }
@@ -99,15 +99,15 @@
     #history .section-heading { margin-bottom:20px; }
     #history h2 { font-size:clamp(1.7rem,3.2vw,2.7rem); margin-bottom:8px; }
     #history .section-intro { font-size:.96rem; }
-    .history-panel,.card,.brand-card,.contact-strip { border:1px solid var(--line); background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,251,245,.94)); box-shadow:var(--shadow); }
+    .history-panel,.card,.brand-card,.contact-strip { border:1px solid var(--line); background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(250,250,251,.95)); box-shadow:var(--shadow); }
     .history-panel { padding:clamp(16px,2.5vw,26px); border-radius:var(--radius-lg); }
     .history-grid,.brand-grid { display:grid; gap:24px; }
     .history-grid { grid-template-columns:1.2fr .8fr; align-items:start; gap:16px; }
-    .history-map-wrap { position:relative; overflow:hidden; border-radius:28px; background:linear-gradient(180deg,#f7efe3,#efe3d3); min-height:325px; padding:18px; box-shadow:inset 0 0 0 1px rgba(56,43,30,.08); }
-    .history-map-wrap::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 22% 18%,rgba(255,255,255,.55),transparent 22%),radial-gradient(circle at 85% 74%,rgba(217,181,116,.14),transparent 22%); pointer-events:none; }
+    .history-map-wrap { position:relative; overflow:hidden; border-radius:28px; background:linear-gradient(180deg,#f4f5f7,#e9ebee); min-height:325px; padding:18px; box-shadow:inset 0 0 0 1px rgba(20,20,30,.06); }
+    .history-map-wrap::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 22% 18%,rgba(255,255,255,.55),transparent 22%),radial-gradient(circle at 85% 74%,rgba(217,67,42,.10),transparent 22%); pointer-events:none; }
     .history-legend { position:absolute; top:12px; left:12px; right:12px; z-index:3; display:flex; flex-wrap:wrap; gap:6px; }
     .history-logo { display:flex; align-items:center; gap:6px; min-height:24px; padding:5px 9px; border-radius:10px; background:rgba(255,255,255,.96); box-shadow:0 10px 24px rgba(0,0,0,.12); opacity:0; transform:translateY(8px); transition:opacity .35s ease, transform .35s ease; }
-    .history-pin-key { width:8px; height:8px; border-radius:50%; box-shadow:0 0 0 3px rgba(34,25,19,.08); flex-shrink:0; }
+    .history-pin-key { width:8px; height:8px; border-radius:50%; box-shadow:0 0 0 3px rgba(15,15,22,.07); flex-shrink:0; }
     .history-pin-key--lc { background:#ea8a1a; }
     .history-pin-key--fh { background:#16120f; }
     .history-pin-key--dhc { background:#c93b27; }
@@ -116,7 +116,7 @@
     .history-map-frame { position:relative; width:100%; max-width:420px; aspect-ratio:960 / 593; }
     .history-map-frame img { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; filter:none; }
     .history-marker { position:absolute; z-index:3; width:22px; height:22px; opacity:0; transform:translate(-50%,-50%) scale(.6); transition:opacity .45s ease, transform .45s ease; }
-    .history-marker .pin { display:block; width:22px; height:22px; border-radius:50%; border:3px solid rgba(255,255,255,.96); box-shadow:0 0 0 4px rgba(34,25,19,.12),0 10px 18px rgba(0,0,0,.18); }
+    .history-marker .pin { display:block; width:22px; height:22px; border-radius:50%; border:3px solid rgba(255,255,255,.96); box-shadow:0 0 0 4px rgba(15,15,22,.10),0 10px 18px rgba(0,0,0,.18); }
     .history-marker .pin--lc { background:#ea8a1a; }
     .history-marker .pin--fh { background:#16120f; }
     .history-marker .pin--dhc { background:#c93b27; }
@@ -127,11 +127,11 @@
     .history-marker--tn-dhc { left:68.9%; top:52.9%; }
     .history-marker--ky-dhc { left:69.6%; top:48.4%; }
     .history-timeline { display:grid; gap:8px; }
-    .history-step { position:relative; width:100%; text-align:left; padding:12px 16px 12px 20px; border-radius:16px; border:1px solid rgba(56,43,30,.1); background:rgba(255,255,255,.7); opacity:.58; transform:translateY(8px); transition:opacity .35s ease, transform .35s ease, box-shadow .35s ease, border-color .35s ease, background .35s ease; cursor:pointer; }
+    .history-step { position:relative; width:100%; text-align:left; padding:12px 16px 12px 20px; border-radius:16px; border:1px solid rgba(20,20,30,.08); background:rgba(255,255,255,.7); opacity:.58; transform:translateY(8px); transition:opacity .35s ease, transform .35s ease, box-shadow .35s ease, border-color .35s ease, background .35s ease; cursor:pointer; }
     .history-step::before { content:""; position:absolute; left:0; top:12px; bottom:12px; width:4px; border-radius:999px; background:linear-gradient(180deg,var(--highlight),var(--brand)); }
-    .history-step h3 { font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Baskerville,Georgia,serif; font-size:1.2rem; line-height:1; margin-bottom:4px; color:#241b13; }
-    .history-step p { color:#43392f; font-size:.88rem; line-height:1.45; }
-    .history-step:hover,.history-step:focus-visible { opacity:.9; transform:translateY(0); border-color:rgba(217,181,116,.3); }
+    .history-step h3 { font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Baskerville,Georgia,serif; font-size:1.2rem; line-height:1; margin-bottom:4px; color:#17181c; }
+    .history-step p { color:#3a3a42; font-size:.88rem; line-height:1.45; }
+    .history-step:hover,.history-step:focus-visible { opacity:.9; transform:translateY(0); border-color:rgba(217,67,42,.25); }
     .history-map-wrap[data-stage="1984"] .history-logo--lc,
     .history-map-wrap[data-stage="2000"] .history-logo--lc,
     .history-map-wrap[data-stage="2022"] .history-logo--lc,
@@ -165,23 +165,23 @@
     .history-timeline[data-stage="2026"] .history-step[data-stage="2026"] {
       opacity:1;
       transform:translateY(0);
-      box-shadow:0 20px 40px rgba(36,24,16,.08);
-      border-color:rgba(217,181,116,.34);
+      box-shadow:0 20px 40px rgba(15,15,22,.07);
+      border-color:rgba(217,67,42,.28);
       background:rgba(255,255,255,.94);
     }
     .brand-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
     .brand-card,.card { position:relative; overflow:hidden; border-radius:var(--radius); transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease; }
     .brand-card { padding:30px; }
-    .brand-card:hover,.brand-card:focus-visible { transform:translateY(-6px); box-shadow:var(--shadow-strong); border-color:rgba(217,181,116,.36); }
-    .brand-card h3 { font-size:2rem; line-height:1.04; font-weight:500; margin:18px 0 12px; color:#241b13; }
-    .brand-card p { color:#43392f; }
+    .brand-card:hover,.brand-card:focus-visible { transform:translateY(-6px); box-shadow:var(--shadow-strong); border-color:rgba(217,67,42,.30); }
+    .brand-card h3 { font-size:2rem; line-height:1.04; font-weight:500; margin:18px 0 12px; color:#17181c; }
+    .brand-card p { color:#3a3a42; }
     .brand-logo-box { display:flex; align-items:center; justify-content:center; min-height:130px; padding:20px; border-radius:20px; background:rgba(255,255,255,.82); }
     .brand-logo-box img { max-width:100%; max-height:72px; object-fit:contain; }
-    .brand-meta,.contact-meta { margin-top:18px; display:inline-flex; align-items:center; gap:10px; color:#6c5e51; font-size:.84rem; letter-spacing:.12em; text-transform:uppercase; }
-    .brand-meta::before,.contact-meta::before { content:""; width:22px; height:1px; background:rgba(108,94,81,.46); }
+    .brand-meta,.contact-meta { margin-top:18px; display:inline-flex; align-items:center; gap:10px; color:#6b6f76; font-size:.84rem; letter-spacing:.12em; text-transform:uppercase; }
+    .brand-meta::before,.contact-meta::before { content:""; width:22px; height:1px; background:rgba(107,111,118,.46); }
     .contact-strip { margin-top:32px; padding:24px 30px; border-radius:var(--radius); display:flex; justify-content:space-between; align-items:center; gap:20px; }
-    .contact-strip p { color:#43392f; }
-    .footer { padding:32px 0 42px; border-top:1px solid rgba(56,43,30,.08); background:rgba(255,251,244,.82); color:#584d41; text-align:center; font-size:.94rem; }
+    .contact-strip p { color:#3a3a42; }
+    .footer { padding:32px 0 42px; border-top:1px solid rgba(20,20,30,.06); background:rgba(250,250,251,.85); color:#5a5d63; text-align:center; font-size:.94rem; }
     .reveal { opacity:0; transform:translateY(18px); transition:opacity .55s ease, transform .55s ease; }
     .reveal.is-visible { opacity:1; transform:translateY(0); }
     @keyframes lineReveal {
@@ -208,7 +208,7 @@
     }
     @media (max-width:1024px) { .history-grid,.brand-grid { grid-template-columns:1fr; } .section-heading { display:block; } .section h2 { margin-bottom:12px; } .history-map-frame { margin:0 auto; } .contact-strip { display:block; } .contact-meta { margin-top:12px; } }
     @media (max-width:900px) { :root { --nav-height:88px; } .site-header { padding:14px 0; } .nav-wrap { flex-wrap:wrap; align-items:center; padding-bottom:12px; } .nav { width:100%; justify-content:flex-start; gap:12px 18px; font-size:.88rem; padding-top:12px; } .hero { min-height:88vh; } .hero-content { padding:30px 0 64px; } .section { padding:88px 0; } .wordmark-stage { min-height:180px; } }
-    @media (max-width:640px) { .brand-lockup { align-items:flex-start; } .brand-copy strong { font-size:.96rem; } .brand-card,.contact-strip { padding:24px; } #history.section { padding:24px 0; } #history .history-panel { padding:10px; } .section { padding:74px 0; } .full-wordmark { font-size:clamp(3rem,14vw,4.8rem); } .hero-subtext { font-size:1.05rem; } #history h2 { font-size:1.3rem; line-height:1.15; } #history .section-intro { display:none; } .history-map-wrap { min-height:clamp(232px,64vw,278px); padding:10px; } .history-map { inset:44px 10px 10px; } .history-logo { min-height:20px; padding:4px 7px; font-size:.72rem; gap:5px; } .history-logo img { max-height:12px; max-width:70px; } .history-pin-key { width:7px; height:7px; box-shadow:0 0 0 2px rgba(34,25,19,.08); } .history-timeline { gap:6px; } .history-step { padding:8px 12px 8px 16px; } .history-step h3 { font-size:1rem; margin-bottom:2px; } .history-step p { font-size:.82rem; line-height:1.4; } }
+    @media (max-width:640px) { .brand-lockup { align-items:flex-start; } .brand-copy strong { font-size:.96rem; } .brand-card,.contact-strip { padding:24px; } #history.section { padding:24px 0; } #history .history-panel { padding:10px; } .section { padding:74px 0; } .full-wordmark { font-size:clamp(3rem,14vw,4.8rem); } .hero-subtext { font-size:1.05rem; } #history h2 { font-size:1.3rem; line-height:1.15; } #history .section-intro { display:none; } .history-map-wrap { min-height:clamp(232px,64vw,278px); padding:10px; } .history-map { inset:44px 10px 10px; } .history-logo { min-height:20px; padding:4px 7px; font-size:.72rem; gap:5px; } .history-logo img { max-height:12px; max-width:70px; } .history-pin-key { width:7px; height:7px; box-shadow:0 0 0 2px rgba(15,15,22,.07); } .history-timeline { gap:6px; } .history-step { padding:8px 12px 8px 16px; } .history-step h3 { font-size:1rem; margin-bottom:2px; } .history-step p { font-size:.82rem; line-height:1.4; } }
   </style>
 </head>
 <body>
@@ -222,6 +222,7 @@
       <nav class="nav" aria-label="Primary navigation">
         <a href="/brands.html">Our Brands</a>
         <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
         <a href="https://dashboard.hotchkissholdings.co" target="_blank" rel="noreferrer">Sign In</a>
       </nav>
     </div>
@@ -307,7 +308,7 @@
         </div>
         <div class="contact-strip reveal">
           <p>For business inquiries, partnership conversations, or media requests, connect with The Hotchkiss Group directly.</p>
-          <p class="contact-meta">pgorman@lcpsa.net</p>
+          <a class="contact-meta" href="/contact.html">Contact Us</a>
         </div>
       </div>
     </section>
